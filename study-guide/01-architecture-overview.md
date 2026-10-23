@@ -19,67 +19,7 @@
 ---
 
 # 第零部分 · 快速上手：先跑起来，再理解（D20）
-
-> **这一节只有 3 件事**：官方文档在哪 → 怎么装 → 第一次该做什么。
-> **刻意不含任何源码路径与架构概念**——先有实感，再谈原理。装完约 15 分钟。
-
-**它是什么（作者原话）**：*"The self-improving AI agent built by Nous Research."*
-白话：**住在你电脑或服务器里，能读写文件、跑命令、开浏览器，记得上次做过什么，还能按点自己干活。**
-（出处 [`README.md`](../README.md:19)）
-
-## 0.1 官方文档
-
-| 想做的事 | 去哪（仓库内优先，站点改版也不会失效） |
-|---|---|
-| **最快跑通** | [`getting-started/quickstart.md`](../website/docs/getting-started/quickstart.md:1) |
-| 安装与前置依赖 | [`getting-started/installation.md`](../website/docs/getting-started/installation.md:1) |
-| 官方推荐学习顺序 | [`getting-started/learning-path.md`](../website/docs/getting-started/learning-path.md:1) |
-| 升级 / 回滚 | [`getting-started/updating.md`](../website/docs/getting-started/updating.md:1) |
-| 常见问题 | [`reference/faq.md`](../website/docs/reference/faq.md:1) |
-| 在线文档站 | <https://hermes-agent.nousresearch.com/docs/> |
-
-## 0.2 三条命令
-
-```bash
-# 1) 安装（Linux / macOS / WSL2）
-curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
-source ~/.zshrc          # 让 hermes 进 PATH（bash 用 ~/.bashrc）
-
-# 2) 选模型（第一次必做）
-hermes model
-
-# 3) 启动
-hermes
-```
-
-Windows 原生 PowerShell 把第 1 步换成 `iex (irm https://hermes-agent.nousresearch.com/install.ps1)`。
-命令出处：[`README.md`](../README.md:40) 与 [`quickstart.md`](../website/docs/getting-started/quickstart.md:53)。
-装依赖走项目自带的 PM，**不要裸 `pip`/`uv`**（原因见本篇 §4.6）。
-
-## 0.3 第一次该做什么
-
-进去后输入一句**只有它能做到**的话，而不是"你好"：
-
-```text
-帮我看看这个目录下有哪些文件，然后总结一下这个项目是干什么的
-```
-
-**成功判据**：① 输出里有你项目里的**真实文件名**；② 屏幕上出现**工具调用**过程（不是一口气吐完）；
-③ 退出重开 `hermes`，它还**记得**刚才聊了什么 ← 这条是它和网页聊天框最大的差别。
-
-## 0.4 跑不通怎么办
-
-| 症状 | 先做这个 |
-|---|---|
-| `hermes: command not found` | 没重载 shell：`source ~/.zshrc`；仍不行看 [`installation.md`](../website/docs/getting-started/installation.md:1) |
-| 能启动，一发消息就报错 | 模型没配好：重跑 `hermes model` |
-| 想知道缺什么 | `hermes doctor` —— 逐条列出缺什么、怎么修（[`installation.md`](../website/docs/getting-started/installation.md:243)） |
-| 确认版本 | `hermes --version` |
-| 装坏了想重来 | 先看 [`updating.md`](../website/docs/getting-started/updating.md:1)，别直接删目录 |
-
-**这一节过不了就别往下读**——§1 起的内容都建立在"你见过它跑"的基础上。
-
----
+阅读相关文档：/Users/jinyan1/Desktop/work/self/hermes-agent/website/docs
 
 # 第一部分 · 产品视角：它是什么，为谁解决什么问题
 
